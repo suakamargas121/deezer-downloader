@@ -24,6 +24,6 @@ RUN mkdir -p /mnt/deezer-downloader
 RUN chown deezer:deezer /mnt/deezer-downloader
 
 USER deezer
-EXPOSE 5000
+EXPOSE 80
 WORKDIR /opt/deezer/app
-CMD /opt/deezer/app/venv/bin/gunicorn --bind 0.0.0.0:5000 app:app
+CMD /opt/deezer/app/venv/bin/gunicorn --bind 0.0.0.0:80 app:app
